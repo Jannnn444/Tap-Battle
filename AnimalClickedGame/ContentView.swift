@@ -19,7 +19,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State var countdoggo = 0
-    @State var countCar = 0
+    @State var countCat = 0
     @State var doggoLevel = 0
     @State var catLevel = 0
     @State var heartPopUp = false
@@ -59,7 +59,7 @@ struct ContentView: View {
                         .bold()
                 }
                 
-                if countCar != 0 && countCar % 10 == 0 {
+                if countCat != 0 && countCat % 10 == 0 {
                     
                     if heartPopUp == true {
                         Image(systemName: "heart.fill")
@@ -88,7 +88,7 @@ struct ContentView: View {
                     .foregroundColor(.secondary)
                 Spacer()
                 
-                Text("\(countCar)")
+                Text("\(countCat)")
                     .font(.largeTitle)
                     .padding()
                     .foregroundColor(.secondary)
@@ -113,8 +113,8 @@ struct ContentView: View {
                 Spacer()
                 
                 Button(action: {
-                    countCar = countCar + 1
-                    if countCar % 10 == 0 && countCar > 0 {
+                    countCat = countCat + 1
+                    if countCat % 10 == 0 && countCat > 0 {
                         catLevel += 1
                         heartPopUp = true
                     }
@@ -134,7 +134,7 @@ struct ContentView: View {
             HStack {
                 Spacer()
                 Button {
-                      countCar = countCar - 1
+                      countCat = countCat - 1
                 } label: {
                     Image(systemName: "flag.2.crossed.circle.fill")
                         .font(.largeTitle)
@@ -174,7 +174,7 @@ struct ContentView: View {
     
     func restart() {
         countdoggo = 0
-        countCar = 0
+        countCat = 0
         doggoLevel = 0
         catLevel = 0
     }
